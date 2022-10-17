@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');          
+
+$primaryFont : 'Lora', serif;
+$secondaryFont: 'Helvetica', 'Arial', sans-serif;
+$textColor : black;
+$textColor2: gray;
+$textColor3: #333;
+$border : #d0d0d0 1px solid;
+$hoverColor: #00ddff;
+$visitedColor: #666;
+$activeColor: #DEB887;
+
+h1 {
+    font-family: $primaryFont;
+    text-align: center;
+    a {
+        color: $textColor;
+        font-size: 1.5em;
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    border-top: $border;
+    border-bottom: $border;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    line-height: 2em;
+    li a {
+        color: $textColor2
+    }
+}
+
+.post-content h2 a {
+    color: $textColor2;
+}
+
+p {
+    font-family: $secondaryFont;
+    color: $textColor3;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        color: $hoverColor;
+    }
+    &:visited {
+        color: $visitedColor;
+    }
+    &:active {
+        color: $activeColor
+    }
+}
+
+.post-date {
+    font-family: $primaryFont;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: right;
+    border-bottom: $border;
+    padding-top: 2em;
+    padding-bottom: .5em;
+}
+
+@media only screen and (min-width: 1028px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    nav ul li {
+        font-size: 2em;
+        margin: .5em;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .post-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        border-left: $border;
+        padding-top: 1.2em;
+        padding-left: 1em;
+        border-bottom: $border;
+    }
+
+    .post-date {
+        padding-right: 1em;
+    }
+
+}
