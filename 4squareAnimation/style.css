@@ -55,8 +55,8 @@
     background-color: darkred;
     border-radius: 50%;
     transition: border-radius .5s ease;
-    background-color .5s ease;
-    transform .5s ease .5s;
+    background-color: .5s ease;
+    transform: .5s ease .5s;
     animation: morphing-circle-square 3s linear infinite;
   }
   
